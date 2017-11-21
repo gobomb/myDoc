@@ -7,15 +7,16 @@
         * client
     * parkSocket
 * Linux
-    * [linux](https://github.com/gobomb/myDoc/wiki/linux)
+    * [Linux 常用配置](https://github.com/gobomb/myDoc/wiki/linux)
+    * [MySQL 配置](https://github.com/gobomb/myDoc/wiki/mysql)
 * Mac
-    * [mac](https://github.com/gobomb/myDoc/wiki/mac)
+    * [Mac 常用配置](https://github.com/gobomb/myDoc/wiki/mac)
 ## 笔记（Notes）
 * Linux/Unix
-    * [i/o](https://github.com/gobomb/myDoc/wiki/io-model)
-    * [command](https://github.com/gobomb/myDoc/wiki/command)
+    * [Unix I/O 模型](https://github.com/gobomb/myDoc/wiki/io-model)
+    * [常用命令](https://github.com/gobomb/myDoc/wiki/command)
 * Golang
 * C/C++
-    * [pointer](https://github.com/gobomb/myDoc/wiki/pointer)
+    * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer)
 * Tool
-    * [git](https://github.com/gobomb/myDoc/wiki/git)
+    * [Git 常用命令](https://github.com/gobomb/myDoc/wiki/git)
