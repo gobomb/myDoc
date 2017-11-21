@@ -15,6 +15,7 @@
 * Linux/Unix
     * [Unix I/O 模型](https://github.com/gobomb/myDoc/wiki/io-model)
     * [常用命令](https://github.com/gobomb/myDoc/wiki/command)
+    * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-note)
 * Golang
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer)
