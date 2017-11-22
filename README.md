@@ -19,5 +19,7 @@
 * Golang
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer)
+* SQL
+    * [Head First SQL](https://github.com/gobomb/myDoc/wiki/head_first_sql)
 * Tool
     * [Git 常用命令](https://github.com/gobomb/myDoc/wiki/git)
