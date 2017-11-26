@@ -17,6 +17,7 @@
     * [常用命令](https://github.com/gobomb/myDoc/wiki/command)
     * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-note)
 * Golang
+    * [gRPC 的配置和使用](https://github.com/gobomb/myDoc/wiki/grpc)
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer)
 * SQL
