@@ -18,8 +18,11 @@
     * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-note)
 * Golang
     * [gRPC 的配置和使用](https://github.com/gobomb/myDoc/wiki/grpc)
+    * [slice 切片](https://github.com/gobomb/myDoc/wiki/slice)
+    * [make 和 new 的区别](https://github.com/gobomb/myDoc/wiki/make-and-new)
+    * [reflect 反射](https://github.com/gobomb/myDoc/wiki/reflect)
 * C/C++
-    * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer)
+    * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 * SQL
     * [Head First SQL](https://github.com/gobomb/myDoc/wiki/head_first_sql)
 * Tool
