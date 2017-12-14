@@ -26,6 +26,7 @@
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 * SQL
     * [Head First SQL](https://github.com/gobomb/myDoc/wiki/head_first_sql)
+    * [SQL notes](https://github.com/gobomb/myDoc/wiki/sql-notes)
 * Tool
     * [Git 常用命令](https://github.com/gobomb/myDoc/wiki/git)
     * [正则表达式](https://github.com/gobomb/myDoc/wiki/regex)
