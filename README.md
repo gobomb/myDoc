@@ -21,7 +21,8 @@
     * [slice 切片](https://github.com/gobomb/myDoc/wiki/slice)
     * [make 和 new 的区别](https://github.com/gobomb/myDoc/wiki/make-and-new)
     * [reflect 反射](https://github.com/gobomb/myDoc/wiki/reflect)
-    * [other notes](https://github.com/gobomb/myDoc/wiki/golang-notes)
+    * [golang notes](https://github.com/gobomb/myDoc/wiki/golang-notes)
+    * [《Go 语言学习笔记》](https://github.com/gobomb/myDoc/wiki/go-learning-note)
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 * SQL
