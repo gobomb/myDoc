@@ -31,5 +31,6 @@
 * Tool
     * [Git 常用命令](https://github.com/gobomb/myDoc/wiki/git)
     * [正则表达式](https://github.com/gobomb/myDoc/wiki/regex)
+    * [Vim](https://github.com/gobomb/myDoc/wiki/vim)
 * Web
     * [RESTful 风格](https://github.com/gobomb/myDoc/wiki/restful)
