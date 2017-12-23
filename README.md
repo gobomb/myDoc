@@ -34,3 +34,5 @@
     * [Vim](https://github.com/gobomb/myDoc/wiki/vim)
 * Web
     * [RESTful 风格](https://github.com/gobomb/myDoc/wiki/restful)
+* Other
+    * [其他笔记]（https://github.com/gobomb/myDoc/wiki/other-notes）
