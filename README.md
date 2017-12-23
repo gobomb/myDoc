@@ -1,6 +1,6 @@
 # myDoc-Wiki
 
-## 配置文档（Configure Document）
+## 配置文档(Configure Document)
 * Applications
     * ngrok
         * server
@@ -11,7 +11,7 @@
     * [MySQL 配置](https://github.com/gobomb/myDoc/wiki/mysql)
 * Mac
     * [Mac 常用配置](https://github.com/gobomb/myDoc/wiki/mac)
-## 笔记（Notes）
+## 笔记(Notes)
 * Linux/Unix
     * [Unix I/O 模型](https://github.com/gobomb/myDoc/wiki/io-model)
     * [常用命令](https://github.com/gobomb/myDoc/wiki/command)
@@ -35,4 +35,4 @@
 * Web
     * [RESTful 风格](https://github.com/gobomb/myDoc/wiki/restful)
 * Other
-    * [其他笔记]（https://github.com/gobomb/myDoc/wiki/other-notes）
+    * [其他笔记](https://github.com/gobomb/myDoc/wiki/other-notes)
