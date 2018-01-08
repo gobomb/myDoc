@@ -26,8 +26,8 @@
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 * Python
-	* [python3 环境搭建](https://github.com/gobomb/myDoc/python3-install)
-	* [python 错误解决过程](https://github.com/gobomb/myDoc/python3-issus) 	
+	* [python3 环境搭建](https://github.com/gobomb/myDoc/wiki/python3-install)
+	* [python 错误解决过程](https://github.com/gobomb/myDoc/wiki/python3-issus) 	
 * SQL
     * [Head First SQL](https://github.com/gobomb/myDoc/wiki/head_first_sql)
     * [SQL notes](https://github.com/gobomb/myDoc/wiki/sql-notes)
