@@ -7,14 +7,15 @@
         * client
     * parkSocket
 * Linux
-    * [Linux 常用配置](https://github.com/gobomb/myDoc/wiki/linux)
-    * [MySQL 配置](https://github.com/gobomb/myDoc/wiki/mysql)
+    * [Linux 常用配置](https://github.com/gobomb/myDoc/wiki/linux-conf)
+    * [MySQL 配置](https://github.com/gobomb/myDoc/wiki/mysql-conf)
 * Mac
-    * [Mac 常用配置](https://github.com/gobomb/myDoc/wiki/mac)
+    * [Mac 常用配置](https://github.com/gobomb/myDoc/wiki/mac-conf)
+    
 ## 笔记(Notes)
 * Linux/Unix
     * [Unix I/O 模型](https://github.com/gobomb/myDoc/wiki/io-model)
-    * [常用命令](https://github.com/gobomb/myDoc/wiki/command)
+    * [常用命令](https://github.com/gobomb/myDoc/wiki/linux-cmd)
     * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-note)
 * Golang
     * [gRPC 的配置和使用](https://github.com/gobomb/myDoc/wiki/grpc)
@@ -25,9 +26,11 @@
     * [《Go 语言学习笔记》](https://github.com/gobomb/myDoc/wiki/go-learning-note)
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
+
 * Python
 	* [python3 环境搭建](https://github.com/gobomb/myDoc/wiki/python3-install)
 	* [python 错误解决过程](https://github.com/gobomb/myDoc/wiki/python3-issus) 	
+
 * SQL
     * [Head First SQL](https://github.com/gobomb/myDoc/wiki/head_first_sql)
     * [SQL notes](https://github.com/gobomb/myDoc/wiki/sql-notes)
