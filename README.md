@@ -28,7 +28,7 @@
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 
 * Python
-	* [Python 笔记](https://github.com/gobomb/myDoc/wiki/python-notes.md)	 
+	* [Python 笔记](https://github.com/gobomb/myDoc/wiki/python-notes)	 
 	* [python3 环境搭建](https://github.com/gobomb/myDoc/wiki/python3-install)
 	* [python 错误解决过程](https://github.com/gobomb/myDoc/wiki/python3-issus) 	
 
