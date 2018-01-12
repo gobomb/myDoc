@@ -11,23 +11,24 @@
     * [MySQL 配置](https://github.com/gobomb/myDoc/wiki/mysql-conf)
 * Mac
     * [Mac 常用配置](https://github.com/gobomb/myDoc/wiki/mac-conf)
-    
+
 ## 笔记(Notes)
 * Linux/Unix
     * [Unix I/O 模型](https://github.com/gobomb/myDoc/wiki/io-model)
     * [常用命令](https://github.com/gobomb/myDoc/wiki/linux-cmd)
-    * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-note)
+    * [基础知识](https://github.com/gobomb/myDoc/wiki/linux-notes)
 * Golang
     * [gRPC 的配置和使用](https://github.com/gobomb/myDoc/wiki/grpc)
     * [slice 切片](https://github.com/gobomb/myDoc/wiki/slice)
     * [make 和 new 的区别](https://github.com/gobomb/myDoc/wiki/make-and-new)
     * [reflect 反射](https://github.com/gobomb/myDoc/wiki/reflect)
-    * [golang notes](https://github.com/gobomb/myDoc/wiki/golang-notes)
-    * [《Go 语言学习笔记》](https://github.com/gobomb/myDoc/wiki/go-learning-note)
+    * [Golang 笔记](https://github.com/gobomb/myDoc/wiki/golang-notes)
+    * [《Go 语言学习笔记》](https://github.com/gobomb/myDoc/wiki/go-learning-notes)
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 
 * Python
+	* [Python 笔记](https://github.com/gobomb/myDoc/wiki/python-notes.md)	 
 	* [python3 环境搭建](https://github.com/gobomb/myDoc/wiki/python3-install)
 	* [python 错误解决过程](https://github.com/gobomb/myDoc/wiki/python3-issus) 	
 
