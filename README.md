@@ -24,6 +24,7 @@
     * [reflect 反射](https://github.com/gobomb/myDoc/wiki/reflect)
     * [Golang 笔记](https://github.com/gobomb/myDoc/wiki/golang-notes)
     * [《Go 语言学习笔记》](https://github.com/gobomb/myDoc/wiki/go-learning-notes)
+    * [Go 的工程管理](https://github.com/gobomb/myDoc/wiki/dependencies-manage.md)
 * C/C++
     * [指针和引用](https://github.com/gobomb/myDoc/wiki/pointer-and-reference)
 
