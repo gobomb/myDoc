@@ -110,3 +110,13 @@ dhclient eth0
 `route -n get default`
 
 `route -n get www.yahoo.com`
+
+## 网卡相关命令
+
+清除网卡配置
+
+`ip addr flush [网卡名]`
+
+查看网卡配置
+
+`ip addr show [网卡名]`
