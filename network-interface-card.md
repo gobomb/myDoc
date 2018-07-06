@@ -96,3 +96,6 @@ ip route del 172.16.100.0/24 via 192.168.6.249
 ```
 dhclient eth0
 ```
+
+当 Host-only 网卡配置成功，会出现宿主机虚拟机相互 ping 得通但宿主机无法 ssh 成功虚拟机的情况，解决方法是 `dhclient [nat网卡]`，原因暂时不明。
+
