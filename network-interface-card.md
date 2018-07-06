@@ -99,3 +99,14 @@ dhclient eth0
 
 当 Host-only 网卡配置成功，会出现宿主机虚拟机相互 ping 得通但宿主机无法 ssh 成功虚拟机的情况，解决方法是 `dhclient [nat网卡]`，原因暂时不明。
 
+## MacOS 下查看路由表和默认网关
+
+### 查看所有路由表
+
+`netstat -rn`
+
+### 查看默认网关
+
+`route -n get default`
+
+`route -n get www.yahoo.com`
