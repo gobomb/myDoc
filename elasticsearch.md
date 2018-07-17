@@ -96,3 +96,9 @@
 	```
 
 	可以看到有两个节点，集群状态为 green，说明配置成功。
+
+
+参考： 
+1. https://zhuanlan.zhihu.com/p/20690152
+2. https://blog.csdn.net/gobitan/article/details/51104362
+3. https://www.cnblogs.com/xiaochina/p/6855591.html
