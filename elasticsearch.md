@@ -16,24 +16,24 @@
 
 	# elasticsearch.yml 配置文件
 	echo 'cluster.name: "cluster"
-node.name: node-0
-node.master: true
-node.data: true
-network.host: 0.0.0.0
-discovery.zen.ping.unicast.hosts: ["172.18.0.200", "172.18.0.201"]
-discovery.zen.minimum_master_nodes: 1
-discovery.zen.ping_timeout: 3s' > elasticsearch.yml
+	node.name: node-0
+	node.master: true
+	node.data: true
+	network.host: 0.0.0.0
+	discovery.zen.ping.unicast.hosts: ["172.18.0.200", "172.18.0.201"]
+	discovery.zen.minimum_master_nodes: 1
+	discovery.zen.ping_timeout: 3s' > elasticsearch.yml
 
     # log4j2.properties 文件
 	echo 'status = error
 
-appender.console.type = Console
-appender.console.name = console
-appender.console.layout.type = PatternLayout
-appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n
+	appender.console.type = Console
+	appender.console.name = console
+	appender.console.layout.type = PatternLayout
+	appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n
 
-rootLogger.level = info
-rootLogger.appenderRef.console.ref = console' > log4j2.properties
+	rootLogger.level = info
+	rootLogger.appenderRef.console.ref = console' > log4j2.properties
 
 	# scripts 目录
 	mkdir scripts
@@ -46,23 +46,23 @@ rootLogger.appenderRef.console.ref = console' > log4j2.properties
 	mkdir -p /root/temp/es-node1 && cd $_
 
 	echo 'cluster.name: "cluster"
-node.name: node-1
-node.master: true
-node.data: true
-network.host: 0.0.0.0
-discovery.zen.ping.unicast.hosts: ["172.18.0.200", "172.18.0.201"]
-discovery.zen.minimum_master_nodes: 1
-discovery.zen.ping_timeout: 3s' > elasticsearch.yml
+	node.name: node-1
+	node.master: true
+	node.data: true
+	network.host: 0.0.0.0
+	discovery.zen.ping.unicast.hosts: ["172.18.0.200", "172.18.0.201"]
+	discovery.zen.minimum_master_nodes: 1
+	discovery.zen.ping_timeout: 3s' > elasticsearch.yml
 
 	echo 'status = error
 
-appender.console.type = Console
-appender.console.name = console
-appender.console.layout.type = PatternLayout
-appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n
+	appender.console.type = Console
+	appender.console.name = console
+	appender.console.layout.type = PatternLayout
+	appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n
 
-rootLogger.level = info
-rootLogger.appenderRef.console.ref = console' > log4j2.properties
+	rootLogger.level = info
+	rootLogger.appenderRef.console.ref = console' > log4j2.properties
 
 	mkdir scripts
 
