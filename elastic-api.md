@@ -39,6 +39,10 @@ curl -X GET "localhost:9200/customer/external/1?pretty"
 curl -X DELETE "localhost:9200/customer?pretty"
 curl -X GET "localhost:9200/_cat/indices?v"
 
+# 删除所有index
+curl -XDELETE http://localhost:9200/_all
+
+
 # 指定 id replace（若该 id 的文档存在，否则 create）
 curl -X PUT "localhost:9200/customer/external/1?pretty" -H 'Content-Type: application/json' -d'
 {
