@@ -27,9 +27,15 @@
 
 `sudo vgcreate vg0 /dev/sdb1`
 
+## 物理卷加入已有卷组
+
+`sudo vgextend vg0 /dev/sdc`
+
 # 创建逻辑卷
 
 `sudo lvcreate -L 60g vg0 -n elastic`
+
+
 
 # 激活逻辑卷
 
@@ -62,6 +68,16 @@ vgs
 vgdisplay
 lvs
 lvdisplay
+```
+
+# 逻辑卷在线扩容
+
+扩增到200G：
+
+```
+sudo lvextend -L 200G /dev/vg0/esrally 
+
+sudo resize2fs /dev/vg0/esrally
 ```
 
 # 参考
