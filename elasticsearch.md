@@ -1,6 +1,6 @@
 
 
-# 在 docker 中搭建 elasticsearch 集群
+# 在 docker 中搭建 elasticsearch 集群（单机）
 
 1. 创建docker自定义网络：
 
