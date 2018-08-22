@@ -1,3 +1,5 @@
+(Ubuntu 1604)
+
 # 查看现有磁盘及分区
 
 `sudo fdisk -l`
@@ -8,13 +10,13 @@
 
 # 解除挂载
 
-`umount -l /mnt`
+`sudo umount -l /mnt`
 
-# 格式化磁盘
+//# 格式化磁盘和分区
 
-`fdisk /dev/sdb`
+//`sudo fdisk /dev/sdb`
 
-具体过程依照交互命令
+//具体过程依照交互命令
 
 
 # 创建物理卷
@@ -44,13 +46,24 @@ sudo vgchange -ay
 
 # 挂载
 
-`sudo mount /dev/mapper/vg0-elastic /mnt/elastic`
+```
+sudo mkdir /mnt/elastic
+
+sudo mount /dev/mapper/vg0-elastic /mnt/elastic
+
+```
 
 # 查看物理卷、卷组、逻辑卷
 
 ```
 pvs
+pvdisplay
 vgs
+vgdisplay
 lvs
+lvdisplay
 ```
 
+# 参考
+
+https://wiki.archlinux.org/index.php/LVM
