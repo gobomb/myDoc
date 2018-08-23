@@ -26,6 +26,10 @@ curl -X GET "localhost:9200/_cat/nodes?v"
 curl -X GET "localhost:9200/_cat/indices?v"
 curl -X PUT "localhost:9200/customer?pretty"
 
+## 如果带账号密码认证
+
+curl --user [your-admin]:[your-password] -X GET "localhost:9200/_cat/health?v"
+
 # 插入文档
 curl -X PUT "localhost:9200/customer/external/1?pretty" -H 'Content-Type: application/json' -d'
 {
