@@ -1,0 +1,27 @@
+场景：使用官方文档中的yaml创建statefulset的时候出错
+
+https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+
+错误：pod has unbound PersistentVolumeClaims
+
+原因：As the cluster used in this tutorial is configured to dynamically provision PersistentVolumes, the PersistentVolumes were created and bound automatically.
+
+解决方法：
+
+去掉yaml中pv的创建部分,k8s会自动分配pv：
+
+```
+ volumeMounts:
+        - name: www
+         mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "my-storage-class"
+      resources:
+        requests:
+          storage: 1Gi
+```
+
