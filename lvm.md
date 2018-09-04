@@ -78,6 +78,8 @@ lvdisplay
 sudo lvextend -L 200G /dev/vg0/esrally 
 
 sudo resize2fs /dev/vg0/esrally
+
+# or ` xfs_growfs /dev/centos/root`
 ```
 
 # 参考
