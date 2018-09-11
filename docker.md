@@ -1,6 +1,6 @@
 # docker 设置
 
-## docker deamn 重启但容器不重启
+## docker daemon 重启但容器不重启
 
 1. `vim /etc/docker/daemon.json`
 
