@@ -27,3 +27,24 @@
 # join to the cluster
 
 `kubeadm join 192.169.56.3:6443 --token [token] --discovery-token-ca-cert-hash [hash]`
+
+# issue
+
+## time zone error when the node join to the cluster
+
+When join to the cluster, we get a error like this:
+
+```
+...
+[discovery] Failed to request cluster info, will try again: [Get https://192.169.56.3:6443/api/v1/namespaces/kube-public/configmaps/cluster-info: x509: certificate has expired or is not yet valid]
+```
+
+The reason is that the time of node and master is different. We should synchronize the time and time zone, run the same command:
+
+```
+tzselect
+
+sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+
+And we can run `date` to see the time.
