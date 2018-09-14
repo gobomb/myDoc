@@ -19,6 +19,21 @@
     KillMode=process
     ...
     ```
+## docker 使用私有 registry
+
+`vim /etc/docker/daemon.json`
+
+```
+{
+  "insecure-registries": [
+    "your.registry.ip"
+  ]
+}
+```
+
+`systemctl restart docker`
+
+
 
 # 问题
 
