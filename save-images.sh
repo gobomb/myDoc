@@ -1,6 +1,7 @@
 #!/bin/bash
 
 i=0
+mkdir $PWD/save-images
 curl -L https://raw.githubusercontent.com/gobomb/myDoc/master/k8s-image | while read image
 do
         docker pull $image
