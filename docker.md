@@ -68,3 +68,24 @@ Sep 12 13:52:00 ubuntu systemd[1]: docker.socket: Unit entered failed state.
 
 
 再次`systemctl start docker`，成功
+
+
+## 启动 docker daemon 时出错
+
+系统：`ubuntu 1604`
+
+错误信息：
+
+```
+Failed to connect to containerd: failed to dial "/var/run/docker/containerd/docker-containerd.sock": dial unix:///var/run/docker/containerd/docker-containerd.sock: timeout
+```
+
+原因：
+
+我是在 k8s 的一个 node 上操作的。强制删除容器，使用 nfs 网络存储的容器没有卸载（通过`mount`可以看到）
+
+解决方法：
+
+通过 `mount|awk '/:/ { print $3 }'|xargs sudo umount -f`强制卸载所有 nfs 的挂载
+
+重新`systemctl start docker`
