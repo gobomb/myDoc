@@ -89,3 +89,5 @@ Failed to connect to containerd: failed to dial "/var/run/docker/containerd/dock
 通过 `mount|awk '/:/ { print $3 }'|xargs sudo umount -f`强制卸载所有 nfs 的挂载
 
 重新`systemctl start docker`
+
+参考： https://github.com/docker/for-linux/issues/274
