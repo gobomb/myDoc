@@ -33,7 +33,17 @@
 
 `systemctl restart docker`
 
+## 使当前用户加入 docker 用户组
 
+`sudo usermod -aG docker thisuser`
+
+`sudo systemctl restart docker`
+
+如果报错：`Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.35/info: dial unix /var/run/docker.sock: connect: permission denied`
+
+则修改 docker.sock 权限：
+
+`sudo chmod a+rw /var/run/docker.sock`
 
 # 问题
 
