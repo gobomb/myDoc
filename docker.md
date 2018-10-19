@@ -20,6 +20,11 @@
     KillMode=process
     ...
     ```
+    
+## 更新已运行的容器使之自动重启
+
+`docker update --restart=always <CONTAINER ID>`
+
 ## docker 使用私有 registry
 
 `vim /etc/docker/daemon.json`
