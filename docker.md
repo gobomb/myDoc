@@ -9,6 +9,7 @@
     ...
           "live-restore": true,
     ...
+    }
     ```
     
 2. `vim /usr/lib/systemd/system/docker.service`
