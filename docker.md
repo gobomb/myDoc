@@ -25,6 +25,21 @@
 
 `docker update --restart=always <CONTAINER ID>`
 
+## 给 docker daemon 设置代理
+
+https://github.com/gobomb/toolbox/blob/master/docker/docker.md
+
+`vim /lib/systemd/system/docker.service.d/http-proxy.conf`(CentOS 下是 /etc/...; Ubuntu 下是 /lib/...)
+
+```
+[Service]
+Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=localhost,127.0.0.1"
+```
+
+`systemctl daemon-reload`
+
+`systemctl restart docker`
+
 ## docker 使用私有 registry
 
 `vim /etc/docker/daemon.json`
