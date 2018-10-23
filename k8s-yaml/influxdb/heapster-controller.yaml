@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    k8s-app: heapster
+    name: heapster
+    version: v6
+  name: heapster
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    k8s-app: heapster
+    version: v6
+  template:
+    metadata:
+      labels:
+        k8s-app: heapster
+        version: v6
+    spec:
+      serviceAccountName: eks-admin 
+      containers:
+      - name: heapster
+        image: kubernetes/heapster:canary
+        imagePullPolicy: Always
+        command:
+        - /heapster
+        # - --source=kubernetes:https://kubernetes.default
+        - --source=kubernetes:https://kubernetes.default?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250&insecure=true 
+
+        #- --source=kubernetes:http://10.10.12.27:8080?inClusterConfig=false
+        #- --source=kubernetes:https://kubernetes.default:6443?inClusterConfig=false&useServiceAccount=true&auth=
+        - --sink=influxdb:http://monitoring-influxdb:8086
