@@ -53,3 +53,13 @@ mount: wrong fs type, bad option, bad superblock on 10.10.12.27:/nfs/default-mys
 到该 pod 所在的 node 机器上（这里是 ubuntu3）上安装 nfs-common：
 
 `apt install nfs-common`
+
+# 开启 apiserver http 代理
+
+在 master 上：
+
+`kubectl proxy --address='0.0.0.0'  --accept-hosts='^*$' --port=8080`
+
+在其他机器上：
+
+`kubectl get node -s http://[master_ip]:8080`
