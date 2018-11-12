@@ -85,3 +85,29 @@ sudo resize2fs /dev/vg0/esrally
 # 参考
 
 https://wiki.archlinux.org/index.php/LVM
+
+
+# 新增 swap 分区
+
+`sudo lvcreate -L 4g vg0 -n swap`
+
+`sudo mkswap /dev/vg0/swap`
+
+`vi /etc/fstab`:
+
+`/dev/mapper/vg0-swap   swap            swap            defaults        0 0`
+
+
+```
+$ sudo swapon -va
+swapon: /dev/mapper/root-swap: found signature [pagesize=4096, signature=swap]
+swapon: /dev/mapper/root-swap: pagesize=4096, swapsize=4294967296, devsize=4294967296
+swapon /dev/mapper/root-swap
+```
+
+`free -h`
+
+```
+...
+Swap:         4.0Gi          0B       4.0Gi
+```
