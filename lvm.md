@@ -111,3 +111,7 @@ swapon /dev/mapper/root-swap
 ...
 Swap:         4.0Gi          0B       4.0Gi
 ```
+
+参考：
+
+https://linux.cn/article-9579-1.html
