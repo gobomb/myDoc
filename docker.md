@@ -122,3 +122,14 @@ Failed to connect to containerd: failed to dial "/var/run/docker/containerd/dock
 重新`systemctl start docker`
 
 参考： https://github.com/docker/for-linux/issues/274
+
+
+
+## `docker push sth`到私有仓库时，出现“error parsing HTTP 400 response body: invalid character 'F' looking for beginning of value: "Failed parsing or buffering the chunk-encoded client body.\r\n"”
+
+这是因为 docker daemon 使用了代理，在`vim /lib/systemd/system/docker.service.d/http-proxy.conf`中将私有仓库地址加到`no_proxy`中
+
+```
+[Service]
+Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=localhost,127.0.0.1,[私有仓库地址]"
+```
