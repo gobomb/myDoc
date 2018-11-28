@@ -133,3 +133,8 @@ Failed to connect to containerd: failed to dial "/var/run/docker/containerd/dock
 [Service]
 Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=localhost,127.0.0.1,[私有仓库地址]"
 ```
+## 在 dockerfile 里 `yum install xx`出现`Rpmdb checksum is invalid: dCDPT(pkg checksums) `
+
+`RUN yum -y install openssh-server passwd supervisor ; yum clean all`
+
+https://github.com/CentOS/sig-cloud-instance-images/issues/15
