@@ -1,5 +1,41 @@
 # docker 设置
 
+## dockerd 暴露出端口给其他主机的 docker 命令行程序调用（不安全，慎用）
+
+dockerd 默认的进程间通信方式是 sock 文件，一般只能本机读取。
+
+修改 docker.service 文件，使之读取环境变量配置，使用 $DOCKER_OPTS 参数：
+
+`vim /lib/systemd/system/docker.service`
+
+```
+...
+EnvironmentFile=-/etc/default/docker
+ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
+...
+```
+
+`vim /etc/default/docker`
+
+```
+DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
+```
+
+重启 dockerd：
+
+```
+sudo systemctl   daemon-reload
+systemctl restart docker
+```
+
+在另一台主机：
+
+```
+docker -H [dockerd ip]:2375 ps
+```
+
+
+
 ## docker daemon 重启但容器不重启
 
 1. `vim /etc/docker/daemon.json`
@@ -138,3 +174,4 @@ Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=local
 `RUN yum -y install openssh-server passwd supervisor ; yum clean all`
 
 https://github.com/CentOS/sig-cloud-instance-images/issues/15
+
