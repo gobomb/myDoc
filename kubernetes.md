@@ -63,3 +63,18 @@ mount: wrong fs type, bad option, bad superblock on 10.10.12.27:/nfs/default-mys
 在其他机器上：
 
 `kubectl get node -s http://[master_ip]:8080`
+
+# `kubectl delete pvc [pvc-name]`出错
+
+`kubectl get pvc` 
+
+```
+mysql01-pv-claim                           Terminating   pvc-c32e14a7-f8f9-11e8-b1c0-0050568693f8   5Gi        RWO            managed-nfs-storage        1d
+```
+
+一直阻塞在`Terminating`状态
+
+`kubectl edit pvc mysql01-pv-claim`
+
+删除`finalizers`字段
+
