@@ -15,6 +15,9 @@ ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
 ...
 ```
 
+(`-`代表 ignore error)
+
+
 `vim /etc/default/docker`
 
 ```
