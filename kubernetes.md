@@ -119,3 +119,27 @@ CSI - Container Storage Interface(容器存储接口)
 
 OCI - Open Container Initiative
 
+# 使用 `kubectl port-forward`的时候失败
+
+背景：
+
+https://github.com/nginxinc/kubernetes-ingress/blob/master/docs/installation.md
+
+通过端口转发访问 nginx ingress controllor
+
+命令：
+
+`$ kubectl port-forward <nginx-ingress-pod> 8080:8080 --namespace=nginx-ingress`
+
+错误：
+
+```
+E1217 20:46:55.531317   18752 portforward.go:331] an error occurred forwarding 8080 -> 8080: error forwarding port 8080 to pod 0e20166936ce1d0988aa01a3928c264813579f324b5ff939c057557b7236d177, uid : unable to do port forwarding: socat not found.
+```
+
+解决方法：
+
+宿主机上安装 socat
+
+`apt install socat`
+
