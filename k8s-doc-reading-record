@@ -1,0 +1,325 @@
+https://kubernetes.io/docs/concepts/
+
+k8s version: v1.13
+
+The follow diagram was the output of the tree command run in k8s doc git registry.
+
+The √ indicate that the doc I have read once at least.
+
+ concepts
+ ├── _index.md
+ ├── architecture
+ │   ├── _index.md
+ │   ├── cloud-controller.md
+√│   ├── master-node-communication.md
+ │   └── nodes.md
+ ├── cluster-administration
+ │   ├── _index.md
+ │   ├── addons.md
+ │   ├── certificates.md
+ │   ├── cloud-providers.md
+ │   ├── cluster-administration-overview.md
+ │   ├── controller-metrics.md
+ │   ├── federation.md
+ │   ├── kubelet-garbage-collection.md
+ │   ├── logging.md
+ │   ├── manage-deployment.md
+ │   ├── networking.md
+ │   └── proxies.md
+ ├── configuration
+ │   ├── _index.md
+ │   ├── assign-pod-node.md
+ │   ├── manage-compute-resources-container.md
+ │   ├── organize-cluster-access-kubeconfig.md
+ │   ├── overview.md
+ │   ├── pod-priority-preemption.md
+ │   ├── scheduler-perf-tuning.md
+ │   ├── secret.md
+ │   └── taint-and-toleration.md
+ ├── containers
+ │   ├── _index.md
+√│   ├── container-environment-variables.md
+√│   ├── container-lifecycle-hooks.md
+ │   ├── images.md
+ │   └── runtime-class.md
+ ├── example-concept-template.md
+ ├── extend-kubernetes
+ │   ├── _index.md
+ │   ├── api-extension
+ │   │   ├── _index.md
+ │   │   ├── apiserver-aggregation.md
+ │   │   └── custom-resources.md
+ │   ├── compute-storage-net
+ │   │   ├── _index.md
+ │   │   ├── device-plugins.md
+ │   │   └── network-plugins.md
+ │   ├── extend-cluster.md
+ │   └── service-catalog.md
+ ├── overview
+ │   ├── _index.md
+√│   ├── components.md
+√│   ├── kubernetes-api.md
+√│   ├── object-management-kubectl
+√│   │   ├── _index.md
+√│   │   ├── declarative-config.md
+√│   │   ├── imperative-command.md
+√│   │   ├── imperative-config.md
+√│   │   └── overview.md
+√│   ├── what-is-kubernetes.md
+ │   └── working-with-objects
+ │       ├── _index.md
+ │       ├── annotations.md
+ │       ├── common-labels.md
+ │       ├── field-selectors.md
+√│       ├── kubernetes-objects.md
+ │       ├── labels.md
+√│       ├── names.md
+√│       └── namespaces.md
+ ├── policy
+ │   ├── _index.md
+ │   ├── pod-security-policy.md
+ │   └── resource-quotas.md
+ ├── services-networking
+ │   ├── _index.md
+ │   ├── add-entries-to-pod-etc-hosts-with-host-aliases.md
+ │   ├── connect-applications-service.md
+ │   ├── dns-pod-service.md
+ │   ├── ingress.md
+ │   ├── network-policies.md
+√│   └── service.md
+ ├── storage
+ │   ├── _index.md
+ │   ├── dynamic-provisioning.md
+ │   ├── persistent-volumes.md
+ │   ├── storage-classes.md
+ │   ├── storage-limits.md
+ │   ├── volume-snapshot-classes.md
+ │   ├── volume-snapshots.md
+ │   └── volumes.md
+ └── workloads
+     ├── _index.md
+     ├── controllers
+     │   ├── _index.md
+     │   ├── cron-jobs.md
+     │   ├── daemonset.md
+     │   ├── deployment.md
+     │   ├── garbage-collection.md
+     │   ├── jobs-run-to-completion.md
+     │   ├── replicaset.md
+     │   ├── replicationcontroller.md
+√    │   ├── statefulset.md
+     │   └── ttlafterfinished.md
+√    └── pods
+√        ├── _index.md
+√        ├── disruptions.md
+√        ├── init-containers.md
+√        ├── pod-lifecycle.md
+√        ├── pod-overview.md
+√        ├── pod.md
+√        └── podpreset.md
+
+
+
+
+ .
+ ├── _index.md
+ ├── access-application-cluster
+ │   ├── _index.md
+ │   ├── access-cluster.md
+ │   ├── communicate-containers-same-pod-shared-volume.md
+ │   ├── configure-access-multiple-clusters.md
+ │   ├── configure-cloud-provider-firewall.md
+ │   ├── configure-dns-cluster.md
+ │   ├── connecting-frontend-backend.md
+ │   ├── create-external-load-balancer.md
+ │   ├── list-all-running-container-images.md
+ │   ├── port-forward-access-application-cluster.md
+ │   ├── service-access-application-cluster.md
+ │   └── web-ui-dashboard.md
+ ├── access-kubernetes-api
+ │   ├── _index.md
+ │   ├── configure-aggregation-layer.md
+ │   ├── custom-resources
+ │   │   ├── _index.md
+ │   │   ├── custom-resource-definition-versioning.md
+ │   │   └── custom-resource-definitions.md
+ │   ├── http-proxy-access-api.md
+ │   └── setup-extension-api-server.md
+ ├── administer-cluster
+ │   ├── _index.md
+ │   ├── access-cluster-api.md
+ │   ├── access-cluster-services.md
+ │   ├── change-default-storage-class.md
+ │   ├── change-pv-reclaim-policy.md
+ │   ├── cluster-management.md
+ │   ├── configure-multiple-schedulers.md
+ │   ├── configure-upgrade-etcd.md
+ │   ├── coredns.md
+ │   ├── cpu-management-policies.md
+ │   ├── declare-network-policy.md
+ │   ├── developing-cloud-controller-manager.md
+ │   ├── dns-custom-nameservers
+ │   │   └── dns.png
+ │   ├── dns-custom-nameservers.md
+ │   ├── dns-debugging-resolution.md
+ │   ├── dns-horizontal-autoscaling.md
+ │   ├── encrypt-data.md
+ │   ├── extended-resource-node.md
+ │   ├── guaranteed-scheduling-critical-addon-pods.md
+ │   ├── highly-available-master.md
+ │   ├── ip-masq-agent.md
+ │   ├── kms-provider.md
+ │   ├── kubeadm
+ │   │   ├── _index.md
+ │   │   ├── kubeadm-certs.md
+ │   │   ├── kubeadm-upgrade-1-11.md
+ │   │   ├── kubeadm-upgrade-1-12.md
+ │   │   ├── kubeadm-upgrade-1-13.md
+ │   │   ├── kubeadm-upgrade-ha-1-12.md
+ │   │   └── kubeadm-upgrade-ha-1-13.md
+ │   ├── kubelet-config-file.md
+ │   ├── limit-storage-consumption.md
+ │   ├── manage-resources
+ │   │   ├── _index.md
+ │   │   ├── cpu-constraint-namespace.md
+ │   │   ├── cpu-default-namespace.md
+ │   │   ├── memory-constraint-namespace.md
+ │   │   ├── memory-default-namespace.md
+ │   │   ├── quota-memory-cpu-namespace.md
+ │   │   └── quota-pod-namespace.md
+ │   ├── memory-available.sh
+ │   ├── namespaces-walkthrough.md
+ │   ├── namespaces.md
+ │   ├── network-policy-provider
+ │   │   ├── _index.md
+ │   │   ├── calico-network-policy.md
+ │   │   ├── cilium-network-policy.md
+ │   │   ├── kube-router-network-policy.md
+ │   │   ├── romana-network-policy.md
+ │   │   └── weave-network-policy.md
+ │   ├── out-of-resource.md
+ │   ├── quota-api-object.md
+ │   ├── reconfigure-kubelet.md
+ │   ├── reserve-compute-resources.md
+ │   ├── running-cloud-controller.md
+ │   ├── safely-drain-node.md
+ │   ├── securing-a-cluster.md
+ │   ├── static-pod.md
+ │   ├── storage-object-in-use-protection.md
+ │   └── sysctl-cluster.md
+ ├── administer-federation
+ │   ├── _index.md
+ │   ├── cluster.md
+ │   ├── configmap.md
+ │   ├── daemonset.md
+ │   ├── deployment.md
+ │   ├── events.md
+ │   ├── hpa.md
+ │   ├── ingress.md
+ │   ├── job.md
+ │   ├── namespaces.md
+ │   ├── replicaset.md
+ │   └── secret.md
+ ├── configure-pod-container
+ │   ├── _index.md
+ │   ├── assign-cpu-resource.md
+ │   ├── assign-memory-resource.md
+ │   ├── assign-pods-nodes.md
+ │   ├── attach-handler-lifecycle-event.md
+ │   ├── configmap
+ │   │   └── kubectl
+ │   │       ├── game-env-file.properties
+ │   │       ├── game.properties
+ │   │       ├── ui-env-file.properties
+ │   │       └── ui.properties
+ │   ├── configure-liveness-readiness-probes.md
+ │   ├── configure-persistent-volume-storage.md
+ │   ├── configure-pod-configmap.md
+ │   ├── configure-pod-initialization.md
+ │   ├── configure-projected-volume-storage.md
+ │   ├── configure-service-account.md
+ │   ├── configure-volume-storage.md
+ │   ├── extended-resource.md
+ │   ├── pull-image-private-registry.md
+ │   ├── quality-service-pod.md
+ │   ├── security-context.md
+ │   ├── share-process-namespace.md
+ │   └── translate-compose-kubernetes.md
+ ├── debug-application-cluster
+ │   ├── _index.md
+ │   ├── audit.md
+ │   ├── core-metrics-pipeline.md
+ │   ├── crictl.md
+ │   ├── debug-application-introspection.md
+ │   ├── debug-application.md
+ │   ├── debug-cluster.md
+ │   ├── debug-init-containers.md
+ │   ├── debug-pod-replication-controller.md
+ │   ├── debug-service.md
+ │   ├── debug-stateful-set.md
+ │   ├── determine-reason-pod-failure.md
+ │   ├── events-stackdriver.md
+ │   ├── get-shell-running-container.md
+ │   ├── local-debugging.md
+ │   ├── logging-elasticsearch-kibana.md
+ │   ├── logging-stackdriver.md
+ │   ├── monitor-node-health.md
+ │   ├── resource-usage-monitoring.md
+ │   └── troubleshooting.md
+ ├── example-task-template.md
+ ├── extend-kubectl
+ │   └── kubectl-plugins.md
+ ├── federation
+ │   ├── _index.md
+ │   ├── federation-service-discovery.md
+ │   ├── policy.rego
+ │   ├── set-up-cluster-federation-kubefed.md
+ │   ├── set-up-coredns-provider-federation.md
+ │   └── set-up-placement-policies-federation.md
+ ├── inject-data-application
+ │   ├── _index.md
+ │   ├── define-command-argument-container.md
+ │   ├── define-environment-variable-container.md
+ │   ├── distribute-credentials-secure.md
+ │   ├── downward-api-volume-expose-pod-information.md
+ │   ├── environment-variable-expose-pod-information.md
+ │   └── podpreset.md
+ ├── job
+ │   ├── _index.md
+ │   ├── automated-tasks-with-cron-jobs.md
+ │   ├── coarse-parallel-processing-work-queue.md
+ │   ├── fine-parallel-processing-work-queue.md
+ │   └── parallel-processing-expansion.md
+ ├── manage-daemon
+ │   ├── _index.md
+ │   ├── rollback-daemon-set.md
+ │   └── update-daemon-set.md
+ ├── manage-gpus
+ │   └── scheduling-gpus.md
+ ├── manage-hugepages
+ │   └── scheduling-hugepages.md
+ ├── run-application
+ │   ├── _index.md
+ │   ├── configure-pdb.md
+ │   ├── delete-stateful-set.md
+√│   ├── force-delete-stateful-set-pod.md
+ │   ├── horizontal-pod-autoscale-walkthrough.md
+ │   ├── horizontal-pod-autoscale.md
+ │   ├── rolling-update-replication-controller.md
+ │   ├── run-replicated-stateful-application.md
+ │   ├── run-single-instance-stateful-application.md
+ │   ├── run-stateless-application-deployment.md
+ │   ├── scale-stateful-set.md
+ │   └── update-api-object-kubectl-patch.md
+ ├── service-catalog
+ │   ├── _index.md
+ │   ├── install-service-catalog-using-helm.md
+ │   └── install-service-catalog-using-sc.md
+ ├── tls
+ │   ├── _index.md
+ │   ├── certificate-rotation.md
+ │   └── managing-tls-in-a-cluster.md
+ └── tools
+     ├── _index.md
+     ├── install-kubectl.md
+     └── install-minikube.md

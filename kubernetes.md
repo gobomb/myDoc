@@ -78,3 +78,44 @@ mysql01-pv-claim                           Terminating   pvc-c32e14a7-f8f9-11e8-
 
 删除`finalizers`字段
 
+# Kubernetes Components
+
+https://kubernetes.io/docs/concepts/overview/components/
+
+Master Components 控制平面:
+
+```
+kube-apiserver: 暴露 Kubernetes API，控制平面的前端
+etcd：持久、高可用的key-value 存储，存储所有的集群数据
+kube-scheduler：关注新创建的pod，并负责把pod调度到node上
+kube-controller-manager：控制器的集合，包括Node Controller，Replication Controller，Endpoints Controller，Service Account & Token Controllers
+cloud-controller-manager：由云供应商实现
+```
+
+Node Components 工作节点:
+
+```
+kubelet：确保container在pod中运行
+kube-proxy：维护容器网络和转发
+Container Runtime：
+```
+
+Addons 插件，实现了集群功能的pods和services:
+
+```
+DNS
+Web UI (Dashboard)
+Container Resource Monitoring
+Cluster-level Logging
+```
+
+# 容器开放接口规范（CRI OCI CNI）
+
+CRI - Container Runtime Interface(容器运行时接口)
+
+CNI - Container Network Interface(容器网络接口)
+
+CSI - Container Storage Interface(容器存储接口)
+
+OCI - Open Container Initiative
+
