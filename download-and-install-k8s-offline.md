@@ -173,9 +173,11 @@ registry:latest
 
 `cp docker/* /usr/bin/`
 
-`vim /lib/systemd/system/docker.service`
+`cp docker.service /lib/systemd/system/docker.service`
 
-`vim /lib/systemd/system/docker.socket`
+`cp docker.socket /lib/systemd/system/docker.socket`
+
+`groupadd docker`
 
 `systemctl enable docker && systemctl start docker`
 
