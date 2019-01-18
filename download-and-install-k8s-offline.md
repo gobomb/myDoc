@@ -105,6 +105,8 @@ kubelet
 
 kubelet.service
 
+crictl
+
 10-kubeadm.conf
 
 cni-plugins-amd64-v0.6.0.tgz
@@ -183,9 +185,9 @@ registry:latest
 
 ## 安装 kubeadm,kubelet,kubectl
 
-`chmod +x kubeadm&&chmod +x kubelet&&chmod +x kubectl`
+`chmod +x kubeadm&&chmod +x kubelet&&chmod +x kubectl&&chmod +x crictl`
 
-`cp kubeadm /usr/bin/kubeadm && cp kubelet /usr/bin/kubelet && cp kubectl /usr/bin/kubectl`
+`cp kubeadm /usr/bin/kubeadm && cp kubelet /usr/bin/kubelet && cp kubectl /usr/bin/kubectl && cp crictl /usr/bin/crictl`
 
 `cp kubelet.service /etc/systemd/system/kubelet.service`
 
@@ -317,3 +319,4 @@ kubeadm join --token <token> <master-ip>:<master-port> --discovery-token-ca-cert
 
 ``` 
 
+<hash> 到master上 `openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey | openssl rsa -pubin -outform DER 2>/dev/null | sha256sum | cut -d' ' -f1`
