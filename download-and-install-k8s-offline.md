@@ -183,9 +183,9 @@ registry:latest
 
 ## 安装 kubeadm,kubelet,kubectl
 
-`cp kubeadm /etc/usr/kubeadm && cp kubelet /etc/usr/kubelet && cp kubectl /etc/usr/kubectl`
+`chmod +x kubeadm&&chmod +x kubelet&&chmod +x kubectl`
 
-`chmod +x kubeadm&&chmod +x kubeket&&chmod +x kubectl`
+`cp kubeadm /usr/bin/kubeadm && cp kubelet /usr/bin/kubelet && cp kubectl /usr/bin/kubectl`
 
 `cp kubelet.service /etc/systemd/system/kubelet.service`
 
