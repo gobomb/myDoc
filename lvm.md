@@ -115,3 +115,19 @@ Swap:         4.0Gi          0B       4.0Gi
 参考：
 
 https://linux.cn/article-9579-1.html
+
+# 删除 lv
+
+1. umount
+
+`umount /dev/ctg-data/log`
+
+2. 移除逻辑卷
+
+`lvremove /dev/ctg-data/log`
+
+3. `lvdisply`
+
+可以看到该逻辑卷已经移除
+
+
