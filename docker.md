@@ -178,3 +178,25 @@ Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=local
 
 https://github.com/CentOS/sig-cloud-instance-images/issues/15
 
+
+## containerd 添加 insecure registry
+
+查看配置文件
+
+`systemctl status containerd` 
+
+
+`cat /etc/systemd/system/containerd.service.d/20-change-config.conf`
+
+看到
+
+`Environment=CONTAINERD_CONFIG=/etc/containerd/config.toml`
+
+`vi /etc/containerd/config.toml`
+
+在 `[plugins] [plugins.cri] [plugins.cri.registry.auths]` 下添加：
+
+```
+      [plugins.cri.registry.mirrors."registry.local"]
+        endpoint = ["http://10.10.10.47:80"]
+```
