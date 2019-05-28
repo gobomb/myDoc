@@ -200,3 +200,7 @@ https://github.com/CentOS/sig-cloud-instance-images/issues/15
       [plugins.cri.registry.mirrors."registry.local"]
         endpoint = ["http://10.10.10.47:80"]
 ```
+
+重启 containerd
+
+`systemctl restart containerd`
