@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/moby/moby/master/contrib/init/systemd/doc
 
 RELEASE=v1.11.3
 
-curl -L --remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl}
+curl -L --remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl,crictl}
 
 curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service">kubelet.service
 
@@ -104,6 +104,8 @@ kubeadm
 kubelet
 
 kubelet.service
+
+crictl
 
 10-kubeadm.conf
 
@@ -173,17 +175,19 @@ registry:latest
 
 `cp docker/* /usr/bin/`
 
-`vim /lib/systemd/system/docker.service`
+`cp docker.service /lib/systemd/system/docker.service`
 
-`vim /lib/systemd/system/docker.socket`
+`cp docker.socket /lib/systemd/system/docker.socket`
+
+`groupadd docker`
 
 `systemctl enable docker && systemctl start docker`
 
 ## 安装 kubeadm,kubelet,kubectl
 
-`cp kubeadm /etc/usr/kubeadm && cp kubelet /etc/usr/kubelet && cp kubectl /etc/usr/kubectl`
+`chmod +x kubeadm&&chmod +x kubelet&&chmod +x kubectl&&chmod +x crictl`
 
-`chmod +x kubeadm&&chmod +x kubeket&&chmod +x kubectl`
+`cp kubeadm /usr/bin/kubeadm && cp kubelet /usr/bin/kubelet && cp kubectl /usr/bin/kubectl && cp crictl /usr/bin/crictl`
 
 `cp kubelet.service /etc/systemd/system/kubelet.service`
 
@@ -315,3 +319,4 @@ kubeadm join --token <token> <master-ip>:<master-port> --discovery-token-ca-cert
 
 ``` 
 
+<hash> 到master上 `openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey | openssl rsa -pubin -outform DER 2>/dev/null | sha256sum | cut -d' ' -f1`
