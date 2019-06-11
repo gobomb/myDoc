@@ -84,13 +84,13 @@ The √ indicate that the doc I have read once at least.
  │   ├── add-entries-to-pod-etc-hosts-with-host-aliases.md
  │   ├── connect-applications-service.md
  │   ├── dns-pod-service.md
- │   ├── ingress.md
+√│   ├── ingress.md
  │   ├── network-policies.md
 √│   └── service.md
  ├── storage
  │   ├── _index.md
  │   ├── dynamic-provisioning.md
- │   ├── persistent-volumes.md
+√│   ├── persistent-volumes.md
  │   ├── storage-classes.md
  │   ├── storage-limits.md
  │   ├── volume-snapshot-classes.md
@@ -121,7 +121,7 @@ The √ indicate that the doc I have read once at least.
 
 
 
- .
+ tasks
  ├── _index.md
  ├── access-application-cluster
  │   ├── _index.md
@@ -150,7 +150,7 @@ The √ indicate that the doc I have read once at least.
  │   ├── access-cluster-api.md
  │   ├── access-cluster-services.md
  │   ├── change-default-storage-class.md
- │   ├── change-pv-reclaim-policy.md
+√│   ├── change-pv-reclaim-policy.md
  │   ├── cluster-management.md
  │   ├── configure-multiple-schedulers.md
  │   ├── configure-upgrade-etcd.md
@@ -161,7 +161,7 @@ The √ indicate that the doc I have read once at least.
  │   ├── dns-custom-nameservers
  │   │   └── dns.png
  │   ├── dns-custom-nameservers.md
- │   ├── dns-debugging-resolution.md
+√│   ├── dns-debugging-resolution.md
  │   ├── dns-horizontal-autoscaling.md
  │   ├── encrypt-data.md
  │   ├── extended-resource-node.md
@@ -232,7 +232,7 @@ The √ indicate that the doc I have read once at least.
  │   │       ├── game.properties
  │   │       ├── ui-env-file.properties
  │   │       └── ui.properties
- │   ├── configure-liveness-readiness-probes.md
+√│   ├── configure-liveness-readiness-probes.md
  │   ├── configure-persistent-volume-storage.md
  │   ├── configure-pod-configmap.md
  │   ├── configure-pod-initialization.md
@@ -323,3 +323,299 @@ The √ indicate that the doc I have read once at least.
      ├── _index.md
      ├── install-kubectl.md
      └── install-minikube.md
+
+
+tutorials/
+├── _index.md
+├── clusters
+│   ├── _index.md
+│   ├── apparmor.md
+│   └── deny-write.profile
+├── configuration
+│   ├── _index.md
+│   └── configure-redis-using-configmap.md
+├── hello-minikube.md
+├── online-training
+│   ├── _index.md
+│   └── overview.md
+├── services
+│   ├── _index.md
+│   └── source-ip.md
+├── stateful-application
+│   ├── _index.md
+│   ├── basic-stateful-set.md
+│   ├── cassandra.md
+│   ├── mysql-wordpress-persistent-volume.md
+│   └── zookeeper.md
+└── stateless-application
+    ├── _index.md
+    ├── expose-external-ip-address.md
+    └── guestbook.md
+
+
+reference
+├── _index.md
+├── access-authn-authz
+│   ├── _index.md
+│   ├── abac.md
+│   ├── admission-controllers.md
+│   ├── authentication.md
+│   ├── authorization.md
+│   ├── bootstrap-tokens.md
+│   ├── controlling-access.md
+│   ├── extensible-admission-controllers.md
+│   ├── node.md
+│   ├── rbac.md
+│   ├── service-accounts-admin.md
+│   └── webhook.md
+├── command-line-tools-reference
+│   ├── _index.md
+│   ├── cloud-controller-manager.md
+│   ├── feature-gates.md
+│   ├── federation-apiserver.md
+│   ├── federation-controller-manager.md
+│   ├── kube-apiserver.md
+│   ├── kube-controller-manager.md
+│   ├── kube-proxy.md
+│   ├── kube-scheduler.md
+│   ├── kubelet-authentication-authorization.md
+│   ├── kubelet-tls-bootstrapping.md
+│   └── kubelet.md
+├── federation
+│   ├── _index.html
+│   ├── extensions
+│   │   └── v1beta1
+│   │       ├── definitions.html
+│   │       └── operations.html
+│   ├── federation
+│   │   └── v1beta1
+│   │       ├── definitions.html
+│   │       └── operations.html
+│   └── v1
+│       ├── definitions.html
+│       └── operations.html
+├── glossary
+│   ├── aggregation-layer.md
+│   ├── annotation.md
+│   ├── application-architect.md
+│   ├── application-developer.md
+│   ├── approver.md
+│   ├── certificate.md
+│   ├── cla.md
+│   ├── cloud-controller-manager.md
+│   ├── cloud-provider.md
+│   ├── cluster-architect.md
+│   ├── cluster-operator.md
+│   ├── cluster.md
+│   ├── cni.md
+│   ├── code-contributor.md
+│   ├── configmap.md
+│   ├── container-env-variables.md
+│   ├── container-lifecycle-hooks.md
+│   ├── container.md
+│   ├── contributor.md
+│   ├── controller.md
+│   ├── cronjob.md
+│   ├── csi.md
+│   ├── customresourcedefinition.md
+│   ├── daemonset.md
+│   ├── deployment.md
+│   ├── developer.md
+│   ├── docker.md
+│   ├── downstream.md
+│   ├── dynamic-volume-provisioning.md
+│   ├── etcd.md
+│   ├── flexvolume.md
+│   ├── helm-chart.md
+│   ├── horizontal-pod-autoscaler.md
+│   ├── image.md
+│   ├── index.md
+│   ├── ingress.md
+│   ├── init-container.md
+│   ├── istio.md
+│   ├── job.md
+│   ├── kops.md
+│   ├── kube-apiserver.md
+│   ├── kube-controller-manager.md
+│   ├── kube-proxy.md
+│   ├── kube-scheduler.md
+│   ├── kubeadm.md
+│   ├── kubectl.md
+│   ├── kubelet.md
+│   ├── kubernetes-api.md
+│   ├── label.md
+│   ├── managed-service.md
+│   ├── member.md
+│   ├── minikube.md
+│   ├── name.md
+│   ├── namespace.md
+│   ├── network-policy.md
+│   ├── node.md
+│   ├── persistent-volume-claim.md
+│   ├── persistent-volume.md
+│   ├── platform-developer.md
+│   ├── pod-security-policy.md
+│   ├── pod.md
+│   ├── podpreset.md
+│   ├── quantity.md
+│   ├── rbac.md
+│   ├── replica-set.md
+│   ├── replication-controller.md
+│   ├── resource-quota.md
+│   ├── reviewer.md
+│   ├── secret.md
+│   ├── security-context.md
+│   ├── selector.md
+│   ├── service-account.md
+│   ├── service-broker.md
+│   ├── service-catalog.md
+│   ├── service.md
+│   ├── sig.md
+│   ├── statefulset.md
+│   ├── storage-class.md
+│   ├── uid.md
+│   ├── upstream.md
+│   ├── volume-plugin.md
+│   ├── volume.md
+│   └── wg.md
+├── issues-security
+│   ├── _index.md
+│   ├── issues.md
+│   └── security.md
+├── kubectl
+│   ├── _index.md
+│   ├── cheatsheet.md
+│   ├── conventions.md
+│   ├── docker-cli-to-kubectl.md
+│   ├── jsonpath.md
+│   ├── kubectl-cmds.md
+│   ├── kubectl.md
+│   └── overview.md
+├── kubernetes-api
+│   ├── _index.md
+│   ├── index.md
+│   └── labels-annotations-taints.md
+├── setup-tools
+│   ├── _index.md
+│   ├── kubeadm
+│   │   ├── _index.md
+│   │   ├── generated
+│   │   │   ├── README.md
+│   │   │   ├── _index.md
+│   │   │   ├── kubeadm.md
+│   │   │   ├── kubeadm_alpha.md
+│   │   │   ├── kubeadm_alpha_certs.md
+│   │   │   ├── kubeadm_alpha_certs_renew.md
+│   │   │   ├── kubeadm_alpha_certs_renew_all.md
+│   │   │   ├── kubeadm_alpha_certs_renew_apiserver-etcd-client.md
+│   │   │   ├── kubeadm_alpha_certs_renew_apiserver-kubelet-client.md
+│   │   │   ├── kubeadm_alpha_certs_renew_apiserver.md
+│   │   │   ├── kubeadm_alpha_certs_renew_etcd-healthcheck-client.md
+│   │   │   ├── kubeadm_alpha_certs_renew_etcd-peer.md
+│   │   │   ├── kubeadm_alpha_certs_renew_etcd-server.md
+│   │   │   ├── kubeadm_alpha_certs_renew_front-proxy-client.md
+│   │   │   ├── kubeadm_alpha_kubeconfig.md
+│   │   │   ├── kubeadm_alpha_kubeconfig_user.md
+│   │   │   ├── kubeadm_alpha_kubelet.md
+│   │   │   ├── kubeadm_alpha_kubelet_config.md
+│   │   │   ├── kubeadm_alpha_kubelet_config_download.md
+│   │   │   ├── kubeadm_alpha_kubelet_config_enable-dynamic.md
+│   │   │   ├── kubeadm_alpha_preflight.md
+│   │   │   ├── kubeadm_alpha_preflight_node.md
+│   │   │   ├── kubeadm_alpha_selfhosting.md
+│   │   │   ├── kubeadm_alpha_selfhosting_pivot.md
+│   │   │   ├── kubeadm_completion.md
+│   │   │   ├── kubeadm_config.md
+│   │   │   ├── kubeadm_config_images.md
+│   │   │   ├── kubeadm_config_images_list.md
+│   │   │   ├── kubeadm_config_images_pull.md
+│   │   │   ├── kubeadm_config_migrate.md
+│   │   │   ├── kubeadm_config_print.md
+│   │   │   ├── kubeadm_config_print_init-defaults.md
+│   │   │   ├── kubeadm_config_print_join-defaults.md
+│   │   │   ├── kubeadm_config_upload.md
+│   │   │   ├── kubeadm_config_upload_from-file.md
+│   │   │   ├── kubeadm_config_upload_from-flags.md
+│   │   │   ├── kubeadm_config_view.md
+│   │   │   ├── kubeadm_init.md
+│   │   │   ├── kubeadm_init_phase.md
+│   │   │   ├── kubeadm_init_phase_addon.md
+│   │   │   ├── kubeadm_init_phase_addon_all.md
+│   │   │   ├── kubeadm_init_phase_addon_coredns.md
+│   │   │   ├── kubeadm_init_phase_addon_kube-proxy.md
+│   │   │   ├── kubeadm_init_phase_bootstrap-token.md
+│   │   │   ├── kubeadm_init_phase_certs.md
+│   │   │   ├── kubeadm_init_phase_certs_all.md
+│   │   │   ├── kubeadm_init_phase_certs_apiserver-etcd-client.md
+│   │   │   ├── kubeadm_init_phase_certs_apiserver-kubelet-client.md
+│   │   │   ├── kubeadm_init_phase_certs_apiserver.md
+│   │   │   ├── kubeadm_init_phase_certs_ca.md
+│   │   │   ├── kubeadm_init_phase_certs_etcd-ca.md
+│   │   │   ├── kubeadm_init_phase_certs_etcd-healthcheck-client.md
+│   │   │   ├── kubeadm_init_phase_certs_etcd-peer.md
+│   │   │   ├── kubeadm_init_phase_certs_etcd-server.md
+│   │   │   ├── kubeadm_init_phase_certs_front-proxy-ca.md
+│   │   │   ├── kubeadm_init_phase_certs_front-proxy-client.md
+│   │   │   ├── kubeadm_init_phase_certs_sa.md
+│   │   │   ├── kubeadm_init_phase_control-plane.md
+│   │   │   ├── kubeadm_init_phase_control-plane_all.md
+│   │   │   ├── kubeadm_init_phase_control-plane_apiserver.md
+│   │   │   ├── kubeadm_init_phase_control-plane_controller-manager.md
+│   │   │   ├── kubeadm_init_phase_control-plane_scheduler.md
+│   │   │   ├── kubeadm_init_phase_etcd.md
+│   │   │   ├── kubeadm_init_phase_etcd_local.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig_admin.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig_all.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig_controller-manager.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig_kubelet.md
+│   │   │   ├── kubeadm_init_phase_kubeconfig_scheduler.md
+│   │   │   ├── kubeadm_init_phase_kubelet-start.md
+│   │   │   ├── kubeadm_init_phase_mark-control-plane.md
+│   │   │   ├── kubeadm_init_phase_preflight.md
+│   │   │   ├── kubeadm_init_phase_upload-config.md
+│   │   │   ├── kubeadm_init_phase_upload-config_all.md
+│   │   │   ├── kubeadm_init_phase_upload-config_kubeadm.md
+│   │   │   ├── kubeadm_init_phase_upload-config_kubelet.md
+│   │   │   ├── kubeadm_join.md
+│   │   │   ├── kubeadm_reset.md
+│   │   │   ├── kubeadm_token.md
+│   │   │   ├── kubeadm_token_create.md
+│   │   │   ├── kubeadm_token_delete.md
+│   │   │   ├── kubeadm_token_generate.md
+│   │   │   ├── kubeadm_token_list.md
+│   │   │   ├── kubeadm_upgrade.md
+│   │   │   ├── kubeadm_upgrade_apply.md
+│   │   │   ├── kubeadm_upgrade_diff.md
+│   │   │   ├── kubeadm_upgrade_node.md
+│   │   │   ├── kubeadm_upgrade_node_config.md
+│   │   │   ├── kubeadm_upgrade_node_experimental-control-plane.md
+│   │   │   ├── kubeadm_upgrade_plan.md
+│   │   │   └── kubeadm_version.md
+│   │   ├── implementation-details.md
+│   │   ├── kubeadm-alpha.md
+│   │   ├── kubeadm-config.md
+│   │   ├── kubeadm-init-phase.md
+│   │   ├── kubeadm-init.md
+│   │   ├── kubeadm-join.md
+│   │   ├── kubeadm-reset.md
+│   │   ├── kubeadm-token.md
+│   │   ├── kubeadm-upgrade.md
+│   │   ├── kubeadm-version.md
+│   │   └── kubeadm.md
+│   └── kubefed
+│       ├── _index.md
+│       ├── kubefed.md
+│       ├── kubefed_init.md
+│       ├── kubefed_join.md
+│       ├── kubefed_options.md
+│       ├── kubefed_unjoin.md
+│       └── kubefed_version.md
+├── tools.md
+└── using-api
+    ├── _index.md
+    ├── api-concepts.md
+    ├── api-overview.md
+    ├── client-libraries.md
+    └── deprecation-policy.md
+
