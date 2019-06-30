@@ -143,3 +143,13 @@ E1217 20:46:55.531317   18752 portforward.go:331] an error occurred forwarding 8
 
 `apt install socat`
 
+# apiserver 日志报错
+
+```
+E0302 12:32:50.114892       7 handlers.go:37] Unable to authenticate the request due to an error: crypto/rsa: verification error
+```
+
+deleting the default token secret
+
+https://github.com/kubernetes/kubernetes/issues/22351
+
