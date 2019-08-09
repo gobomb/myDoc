@@ -153,3 +153,23 @@ deleting the default token secret
 
 https://github.com/kubernetes/kubernetes/issues/22351
 
+
+# 删除处于 terminating 的 namespace
+
+https://github.com/kubernetes/kubernetes/issues/60807#issuecomment-408599873
+
+`kubectl get namespace annoying-namespace-to-delete -o json > tmp.json`
+
+then edit tmp.json and remove"kubernetes"
+
+`curl -k -H "Content-Type: application/json" -X PUT --data-binary @tmp.json https://kubernetes-cluster-ip/api/v1/namespaces/annoying-namespace-to-delete/finalize`
+
+
+# 快速通过命令部署和暴露 nginx
+
+
+```
+kubectl run nginx --image=nginx --port=80 
+kubectl get pod 
+kubectl expose pod nginx-64f497f8fd-jm5hh --port=80 --target-port=80 --type=NodePort --name nginx
+```
