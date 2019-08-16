@@ -160,9 +160,17 @@ https://github.com/kubernetes/kubernetes/issues/60807#issuecomment-408599873
 
 `kubectl get namespace annoying-namespace-to-delete -o json > tmp.json`
 
-then edit tmp.json and remove"kubernetes"
+then edit tmp.json and remove 
 
-`curl -k -H "Content-Type: application/json" -X PUT --data-binary @tmp.json https://kubernetes-cluster-ip/api/v1/namespaces/annoying-namespace-to-delete/finalize`
+```
+        "finalizers": [
+            "kubernetes"
+        ]
+```
+
+`kubectl proxy --port=8081`
+
+`curl -k -H "Content-Type: application/json" -X PUT --data-binary @tmp.json http:127.0.0.1:8081///api/v1/namespaces/annoying-namespace-to-delete/finalize`
 
 
 # 快速通过命令部署和暴露 nginx
