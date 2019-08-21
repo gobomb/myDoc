@@ -227,3 +227,49 @@ https://github.com/CentOS/sig-cloud-instance-images/issues/15
 重启 containerd
 
 `systemctl restart containerd`
+# 让docker使用代理
+
+## 创建目录
+
+CentOS
+
+`mkdir -p /etc/systemd/system/docker.service.d`
+
+Ubuntu
+
+`mkdir -p /lib/systemd/system/docker.service.d`
+
+## 创建配置文件
+
+CentOS
+
+`vim /etc/systemd/system/docker.service.d/http-proxy.conf`
+
+Ubuntu
+
+`vim /lib/systemd/system/docker.service.d/http-proxy.conf`
+
+## 写入以下数据
+
+```
+[Service]
+Environment="HTTP_PROXY=ip:port/"
+Environment="HTTPS_PROXY=ip:port/"
+```
+
+## 更新配置
+
+`sudo systemctl daemon-reload`
+
+## 检查配置
+
+`systemctl show  docker|grep Environment`
+
+## 正常会包含以下信息
+
+`Environment=HTTP_PROXY=ip:port/ HTTPS_PROXY=ip:port/`
+
+## 重启docker
+
+`sudo systemctl restart docker`
+
