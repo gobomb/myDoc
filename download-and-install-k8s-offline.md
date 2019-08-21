@@ -273,7 +273,7 @@ docker run -d --privileged --restart=always \
 
 fuzzle/docker-nfs-server:latest
 
-docker run -d --name registry -p 5000:5000 --restart -v /data/registry:/tmp/registry always registry
+docker run -d --name registry -p 5000:5000 --restart always -v /data/registry:/var/lib/registry  registry
 
 ```
 
