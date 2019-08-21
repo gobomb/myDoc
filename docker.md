@@ -105,6 +105,29 @@ Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=local
 
 `sudo chmod a+rw /var/run/docker.sock`
 
+## centos 安装 docker
+
+```
+ wget  https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+ mv docker-ce.repo  /etc/yum.repos.d/
+ yum install -y docker-ce
+ systemctl  daemon-reload
+ systemctl  start docker  
+```
+### centos 卸载 docker
+
+```
+$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+ ```
+
+
 # 问题
 
 ## 自行安装 docker.service 遇到的 `systemctl start docker`失败的问题

@@ -1,4 +1,20 @@
+# 设置内存
 
+虚拟内存分配太少启动会报错：
+
+```
+Jul 20 14:53:46 scratchpad elasticsearch: [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+```
+
+解决：
+
+```
+$ vim /etc/sysctl.conf 
+
+vm.max_map_count=262144
+
+$ sysctl -w vm.max_map_count=262144
+```
 
 # 在 docker 中搭建 elasticsearch 集群（单机）
 
