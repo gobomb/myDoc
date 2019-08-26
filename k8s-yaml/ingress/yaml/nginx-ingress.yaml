@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-ingress
+  namespace: default
+spec:
+  rules:
+  - host: traefik.nginx.myk8s.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: mynginx
+          servicePort: 80
