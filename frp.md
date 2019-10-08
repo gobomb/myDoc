@@ -4,15 +4,8 @@
 
 ## server 端
 
-mkdir ~/git && cd ~/git
 
-git clone https://github.com/fatedier/frp.git
-
-cd frp
-
-docker build -t frp:latest .
-
-vim conf/frps.ini
+vim ~/conf/frps.ini
 
 ```
   [common]
@@ -20,22 +13,15 @@ vim conf/frps.ini
 
 ```
 
-docker run -v ~/git/frp/conf:/conf -p 7000:7000 -p 7022:7022 -d --name frps frp -c /conf/frps.ini
+docker run -v ~//conf:/conf -p 7000:7000 -p 7022:7022 -d --name frps gobomb/frp:20190702 -c /conf/frps.ini
 
 这里的7000为server端监听端口，即client端配置中的server_port
 
 这里的7022为client端的remote_ip
 
 ## client 端
-mkdir ~/git && cd ~/git
 
-git clone https://github.com/fatedier/frp.git
-
-cd frp
-
-docker build -t frp:latest .
-
-vim conf/frpc.ini
+vim ~/conf/frpc.ini
 
 ```
   [common]
@@ -53,7 +39,7 @@ server_ip为server的公网ip
 
 server_port、remote_port与server暴露的端口保持一致（7000、7022）
 
-docker run -v ~/git/frp/conf:/conf -d --restart=always --entrypoint /frpc frp -c /conf/frpc.ini
+docker run -v ~/git/frp/conf:/conf -d --restart=always --entrypoint /frpc gobomb/frp:20190702 -c /conf/frpc.ini
 
 ## 访问方式
 
