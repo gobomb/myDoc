@@ -229,6 +229,8 @@ Failed to connect to containerd: failed to dial "/var/run/docker/containerd/dock
 [Service]
 Environment="HTTP_PROXY=0.0.0.0:5679" "HTTPS_PROXY=0.0.0.0:5679" "NO_PROXY=localhost,127.0.0.1,[私有仓库地址]"
 ```
+
+
 ## 在 dockerfile 里 `yum install xx`出现`Rpmdb checksum is invalid: dCDPT(pkg checksums) `
 
 `RUN yum -y install openssh-server passwd supervisor ; yum clean all`
@@ -298,6 +300,11 @@ Environment="HTTPS_PROXY=ip:port/"
 ## 检查配置
 
 `systemctl show  docker|grep Environment`
+
+or
+
+`systemctl show --property=Environment docker`
+
 
 ## 正常会包含以下信息
 
