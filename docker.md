@@ -1,3 +1,26 @@
+# docker document note
+
+## The underlying technology
+
+### Namespaces
+
+Docker uses a technology called namespaces to provide the isolated workspace called the container.
+
+These namespaces provide a layer of isolation. Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
+
+5 namespace docker engine uses： pid、net、ipc、uts、mnt
+
+### Control groups
+
+Docker Engine on Linux also relies on another technology called control groups (cgroups). A cgroup limits an application to a specific set of resources. Control groups allow Docker Engine to share available hardware resources to containers and optionally enforce limits and constraints.
+
+### Union file systems
+
+Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast. Docker Engine uses UnionFS to provide the building blocks for containers. 
+
+
+
+
 # docker 设置
 
 ## dockerd 暴露出端口给其他主机的 docker 命令行程序调用（不安全，慎用）
