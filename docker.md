@@ -19,7 +19,18 @@ Docker Engine on Linux also relies on another technology called control groups (
 Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast. Docker Engine uses UnionFS to provide the building blocks for containers. 
 
 
+## Prune unused Docker objects
 
+The `docker image prune` command allows you to clean up unused images. By default, `docker image prune` only cleans up dangling images. A dangling image is one that is not tagged and is not referenced by any container. To remove dangling images:
+
+
+### View stack traces
+
+The Docker daemon log can be viewed by using one of the following methods:
+
+- By running `journalctl -u docker.service` on Linux systems using `systemctl`
+- `/var/log/messages`, `/var/log/daemon.log`, or `/var/log/docker.log` on older
+  Linux systems
 
 # docker 设置
 
