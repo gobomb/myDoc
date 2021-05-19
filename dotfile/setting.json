@@ -1,0 +1,56 @@
+{
+    "vs-kubernetes": {
+        "vs-kubernetes.kubectl-path.linux": "/home/mon/.vs-kubernetes/tools/kubectl/kubectl"
+    },
+    "workbench.colorTheme": "One Dark Pro",
+    "files.autoSave": "afterDelay",
+    "workbench.sideBar.location": "left",
+    "go.formatTool": "goimports",
+    "go.docsTool": "gogetdoc",
+    "go.useLanguageServer": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.autoComplete.addBrackets": true,
+    "python.languageServer": "Microsoft",
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+
+    "go.alternateTools": {
+    
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "go.buildFlags": [
+        "-v"
+    ],
+    "editor.tabCompletion": "on",
+    "go.generateTestsFlags": ["--template_dir=/home/mon/workspace/templates","-i"],
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": true,
+        "addTags": true,
+        "removeTags": false,
+        "fillStruct": true,
+        "testAtCursor": true,
+        "testFile": false,
+        "testPackage": false,
+        "generateTestForFunction": true,
+        "generateTestForFile": false,
+        "generateTestForPackage": false,
+        "addImport": true,
+        "testCoverage": true,
+        "playground": true,
+        "debugTestAtCursor": true,
+        "benchmarkAtCursor": false
+    }
+}
