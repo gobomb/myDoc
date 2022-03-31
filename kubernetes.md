@@ -27,9 +27,6 @@ https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
           storage: 1Gi
 ```
 
-#  kubectl delete pod <pod-name> 删除不了
-
-需要启动 pod 所在的 node
 
 # 挂载 nfs 提供的 volume 出错
 
